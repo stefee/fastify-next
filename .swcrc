@@ -1,0 +1,12 @@
+{
+  "jsc": {
+    "target": "es2018",
+    "parser": {
+      "syntax": "typescript"
+    }
+  },
+  "module": {
+    "type": "commonjs",
+    "strict": true
+  }
+}
