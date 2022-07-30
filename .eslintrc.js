@@ -16,14 +16,4 @@ module.exports = {
   rules: {
     "@typescript-eslint/require-await": "off",
   },
-  overrides: [
-    {
-      files: ["*.spec.*", "*.test.*"],
-      extends: ["plugin:jest/recommended", "plugin:jest/style"],
-      rules: {
-        "@typescript-eslint/unbound-method": "off",
-        "jest/unbound-method": "error",
-      },
-    },
-  ],
 };
