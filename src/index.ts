@@ -3,6 +3,17 @@ import fp from "fastify-plugin";
 import next from "next";
 import { NextParsedUrlQuery } from "next/dist/server/request-meta";
 
+declare module "fastify" {
+  interface FastifyInstance {
+    next(path: string): void;
+  }
+
+  interface FastifyReply {
+    render(path: string): Promise<void>;
+    renderError(error: Error | null): Promise<void>;
+  }
+}
+
 function setRawHeaders(reply: FastifyReply) {
   for (const [headerName, headerValue] of Object.entries(reply.getHeaders())) {
     if (headerValue) {
@@ -28,7 +39,7 @@ function fastifyNext(
   });
 
   fastify.decorate("next", function (path: string) {
-    fastify.get(path, async function (request, reply) {
+    fastify.all(path, async function (request, reply) {
       await preparePromise;
       setRawHeaders(reply);
       await reply.hijack();
