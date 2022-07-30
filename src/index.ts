@@ -1,7 +1,7 @@
 import type { FastifyInstance, FastifyReply } from "fastify";
+import type { NextParsedUrlQuery } from "next/dist/server/request-meta";
 import fp from "fastify-plugin";
 import next from "next";
-import { NextParsedUrlQuery } from "next/dist/server/request-meta";
 
 declare module "fastify" {
   interface FastifyInstance {
