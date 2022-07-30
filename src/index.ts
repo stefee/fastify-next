@@ -27,7 +27,7 @@ async function fastifyNext(
   options: Parameters<typeof next>[0]
 ) {
   const nextServer = next({
-    dev: process.env.NODE_ENV !== "production",
+    dev: process.env.NODE_ENV === "development",
     ...options,
   });
   const nextRequestHandler = nextServer.getRequestHandler();
