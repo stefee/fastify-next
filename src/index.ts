@@ -22,7 +22,7 @@ function setRawHeaders(reply: FastifyReply) {
   }
 }
 
-function fastifyNext(
+async function fastifyNext(
   fastify: FastifyInstance,
   options: Parameters<typeof next>[0]
 ) {
