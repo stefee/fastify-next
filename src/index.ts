@@ -9,8 +9,8 @@ declare module "fastify" {
   }
 
   interface FastifyReply {
-    render(path: string): Promise<void>;
-    renderError(error: Error | null): Promise<void>;
+    nextRender(path: string): Promise<void>;
+    nextRenderError(error: Error | null): Promise<void>;
   }
 }
 
@@ -47,7 +47,7 @@ function fastifyNext(
     });
   });
 
-  fastify.decorateReply("render", async function (path: string) {
+  fastify.decorateReply("nextRender", async function (path: string) {
     await preparePromise;
     await this.hijack();
     setRawHeaders(this);
@@ -59,18 +59,21 @@ function fastifyNext(
     );
   });
 
-  fastify.decorateReply("renderError", async function (error: Error | null) {
-    await preparePromise;
-    await this.hijack();
-    setRawHeaders(this);
-    await nextServer.renderError(
-      error,
-      this.request.raw,
-      this.raw,
-      this.request.url,
-      this.request.query as NextParsedUrlQuery
-    );
-  });
+  fastify.decorateReply(
+    "nextRenderError",
+    async function (error: Error | null) {
+      await preparePromise;
+      await this.hijack();
+      setRawHeaders(this);
+      await nextServer.renderError(
+        error,
+        this.request.raw,
+        this.raw,
+        this.request.url,
+        this.request.query as NextParsedUrlQuery
+      );
+    }
+  );
 }
 
 export default fp(fastifyNext, {
