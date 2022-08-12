@@ -33,8 +33,8 @@
   ],
   "devDependencies": {
     "@swc/cli": "0.1.57",
-    "@swc/core": "1.2.224",
-    "@swc/helpers": "0.4.3",
+    "@swc/core": "1.2.226",
+    "@swc/helpers": "0.4.6",
     "@types/node": "18.6.2",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
