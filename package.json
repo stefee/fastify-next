@@ -43,7 +43,7 @@
     "eslint": "8.22.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
-    "fastify": "4.5.0",
+    "fastify": "4.5.1",
     "next": "12.2.5",
     "pino-pretty": "9.0.1",
     "prettier": "2.7.1",
