@@ -41,12 +41,6 @@ fastify.next('/_next/*');
 
 The **@fastify/nextjs** plugin includes [under-pressure](https://www.npmjs.com/package/under-pressure) as a dependency which can be enabled by passing the `underPressure: true` option. This package does not currently include support for under-pressure.
 
-### Fastify v4
-
-This plugin supports Fastify v4. 🎉
-
-Support in the official plugin is [currently pending](https://github.com/fastify/fastify-nextjs/issues/557).
-
 ### Startup time during local dev
 
 Next.js type-checks and compiles the application when the dev server first starts. The **@fastify/nextjs** plugin waits for the Next.js server to finish doing this before resolving plugin initialization. This can lead to [plugin timeout](https://www.fastify.io/docs/latest/Reference/Server/#plugintimeout) in [large Next.js projects](https://github.com/fastify/fastify-nextjs#plugin-timeout-and-nextjs-development-mode).
