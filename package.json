@@ -44,7 +44,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
     "fastify": "4.9.2",
-    "next": "13.0.2",
+    "next": "13.0.3",
     "pino-pretty": "9.1.1",
     "prettier": "2.7.1",
     "react": "18.2.0",
