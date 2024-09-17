@@ -57,6 +57,6 @@
     "next": "12.x || 13.x || 14.x"
   },
   "dependencies": {
-    "fastify-plugin": "^4.5.1"
+    "fastify-plugin": "^5.0.0"
   }
 }
