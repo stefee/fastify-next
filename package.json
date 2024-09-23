@@ -2,7 +2,7 @@
   "name": "fastify-next",
   "version": "0.3.0",
   "main": "dist/index.js",
-  "types": "src/index.ts",
+  "types": "index.ts",
   "files": [
     "dist/*",
     "src/*"
