@@ -5,7 +5,7 @@
   "types": "index.ts",
   "files": [
     "dist/*",
-    "src/*"
+    "index.ts"
   ],
   "scripts": {
     "prepare": "swc index.ts --out-dir dist",
