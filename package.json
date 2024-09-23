@@ -8,7 +8,7 @@
     "src/*"
   ],
   "scripts": {
-    "prepare": "swc src --out-dir dist",
+    "prepare": "swc index.ts --out-dir dist",
     "test": "tsc"
   },
   "repository": {
@@ -32,31 +32,31 @@
     "rendering"
   ],
   "devDependencies": {
-    "@swc/cli": "0.3.9",
-    "@swc/core": "1.4.1",
-    "@swc/helpers": "0.5.6",
-    "@types/node": "20.8.10",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.19",
-    "@typescript-eslint/eslint-plugin": "6.9.1",
-    "@typescript-eslint/parser": "6.9.1",
-    "eslint": "8.53.0",
-    "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-prettier": "5.0.1",
-    "fastify": "4.26.1",
-    "next": "14.1.0",
-    "pino-pretty": "10.3.1",
-    "prettier": "3.0.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "1.7.26",
+    "@swc/helpers": "0.5.13",
+    "@types/node": "22.5.5",
+    "@types/react": "18.3.8",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/parser": "7.18.0",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "fastify": "5.0.0",
+    "next": "14.2.13",
+    "pino-pretty": "11.2.2",
+    "prettier": "3.3.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "swc": "1.0.11",
     "ts-node": "10.9.2",
-    "typescript": "5.3.3"
+    "typescript": "5.6.2"
   },
   "peerDependencies": {
     "next": "12.x || 13.x || 14.x"
   },
   "dependencies": {
-    "fastify-plugin": "^4.5.1"
+    "fastify-plugin": "^5.0.1"
   }
 }

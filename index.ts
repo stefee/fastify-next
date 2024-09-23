@@ -24,7 +24,7 @@ function setRawHeaders(reply: FastifyReply) {
 
 async function fastifyNext(
   fastify: FastifyInstance,
-  options: Parameters<typeof next>[0]
+  options: Parameters<typeof next>[0],
 ) {
   const nextServer = next({
     dev: process.env.NODE_ENV === "development",
@@ -55,7 +55,7 @@ async function fastifyNext(
       this.request.raw,
       this.raw,
       path,
-      this.request.query as NextParsedUrlQuery
+      this.request.query as NextParsedUrlQuery,
     );
   });
 
@@ -70,13 +70,13 @@ async function fastifyNext(
         this.request.raw,
         this.raw,
         this.request.url,
-        this.request.query as NextParsedUrlQuery
+        this.request.query as NextParsedUrlQuery,
       );
-    }
+    },
   );
 }
 
 export default fp(fastifyNext, {
-  fastify: "4.x",
+  fastify: "5.x",
   name: "fastify-next",
 });

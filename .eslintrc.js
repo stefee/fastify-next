@@ -13,4 +13,7 @@ module.exports = {
     project: "./tsconfig.json",
   },
   reportUnusedDisableDirectives: true,
+  rules: {
+    "@typescript-eslint/require-await": "off",
+  },
 };
