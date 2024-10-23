@@ -33,28 +33,28 @@
   ],
   "devDependencies": {
     "@swc/cli": "^0.4.0",
-    "@swc/core": "1.7.26",
+    "@swc/core": "1.7.39",
     "@swc/helpers": "0.5.13",
-    "@types/node": "22.5.5",
-    "@types/react": "18.3.8",
-    "@types/react-dom": "18.3.0",
+    "@types/node": "22.7.9",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "fastify": "5.0.0",
-    "next": "14.2.13",
-    "pino-pretty": "11.2.2",
+    "next": "15.0.1",
+    "pino-pretty": "11.3.0",
     "prettier": "3.3.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "swc": "1.0.11",
     "ts-node": "10.9.2",
-    "typescript": "5.6.2"
+    "typescript": "5.6.3"
   },
   "peerDependencies": {
-    "next": "12.x || 13.x || 14.x"
+    "next": "12.x || 13.x || 14.x || 15.x"
   },
   "dependencies": {
     "fastify-plugin": "^5.0.1"
